@@ -1348,32 +1348,33 @@ footer p {
     margin: 0;
 }
 
-/* Liste simple pour la veille */
+/* Liste avec coches (style Help Desk) */
 .veille-liste {
     list-style: none;
-    padding-left: 0;
+    padding: 0;
 }
 
 .veille-liste li {
-    padding: 10px 10px 10px 30px;
+    padding: 12px 12px 12px 35px;
     margin-bottom: 10px;
+    background-color: var(--blanc-casse);
+    border-left: 4px solid var(--rose-accent);
     position: relative;
 }
 
 .veille-liste li::before {
-    content: "•";
+    content: "✓";
     position: absolute;
     left: 12px;
     color: var(--rose-accent);
     font-weight: bold;
 }
 
-/* Boxes simples pour les recommandations */
+/* Boxes simples pour les recommandations (sans hover) */
 .recommandation-box {
     background-color: var(--blanc-casse);
     padding: 20px;
     margin-bottom: 20px;
-    border-radius: 5px;
     border-left: 4px solid var(--rose-accent);
 }
 
@@ -1414,27 +1415,20 @@ footer p {
     margin-top: 30px;
 }
 
+/* Bouton GitHub identique aux autres boutons */
 .btn-github {
     display: inline-block;
-    background-color: var(--texte-principal);
+    background-color: var(--rose-accent);
     color: var(--blanc);
-    padding: 15px 35px;
-    border-radius: 8px;
+    padding: 12px 30px;
+    border-radius: 5px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.05em;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .btn-github:hover {
     background-color: var(--rose-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.btn-github span {
-    font-size: 1.3em;
-    margin-right: 8px;
 }
 
 .projet-perso-bloc {
