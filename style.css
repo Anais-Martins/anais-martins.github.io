@@ -1330,80 +1330,178 @@ footer p {
 
 
 /* ========================================
-   AJOUTS POUR LA PAGE VEILLE ICM
+   AJOUTS POUR LA PAGE VEILLE (VERSION SOBRE)
    ======================================== */
 
-/* Box pour mettre en avant la problématique */
+/* Box simple pour la problématique */
 .problematique-box {
-    background: linear-gradient(135deg, var(--rose-pale) 0%, var(--blanc-casse) 100%);
-    padding: 30px;
-    border-radius: 10px;
-    border-left: 5px solid var(--rose-accent);
+    background-color: var(--rose-pale);
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid var(--rose-accent);
     margin: 20px 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .problematique-box p {
-    font-size: 1.1em;
-    line-height: 1.7;
+    font-size: 1.05em;
+    line-height: 1.6;
     margin: 0;
 }
 
-/* Liste à puces pour la veille */
+/* Liste simple pour la veille */
 .veille-liste {
     list-style: none;
     padding-left: 0;
 }
 
 .veille-liste li {
-    padding: 10px 10px 10px 35px;
-    margin-bottom: 12px;
-    background-color: var(--blanc-casse);
-    border-left: 3px solid var(--rose-accent);
+    padding: 10px 10px 10px 30px;
+    margin-bottom: 10px;
     position: relative;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-.veille-liste li:hover {
-    background-color: var(--rose-pale);
-    transform: translateX(5px);
 }
 
 .veille-liste li::before {
-    content: "→";
+    content: "•";
     position: absolute;
     left: 12px;
     color: var(--rose-accent);
     font-weight: bold;
-    font-size: 1.2em;
 }
 
-/* Boxes pour les recommandations */
+/* Boxes simples pour les recommandations */
 .recommandation-box {
     background-color: var(--blanc-casse);
-    padding: 25px;
+    padding: 20px;
     margin-bottom: 20px;
-    border-radius: 8px;
-    border-left: 5px solid var(--rose-hover);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.recommandation-box:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    border-left: 4px solid var(--rose-accent);
 }
 
 .recommandation-box h3 {
-    color: var(--rose-hover);
+    color: var(--texte-principal);
     margin-top: 0;
-    margin-bottom: 12px;
-    font-size: 1.15em;
+    margin-bottom: 10px;
 }
 
 .recommandation-box p {
     margin: 0;
     line-height: 1.6;
+}
+
+/* ========================================
+   PAGE PROJETS PERSONNELS
+   ======================================== */
+
+.projetsperso-section {
+    background-color: var(--blanc);
+    padding: 60px 0;
+}
+
+.projetsperso-intro {
+    background-color: var(--rose-pale);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.projetsperso-intro h2 {
+    color: var(--rose-hover);
+    margin-bottom: 20px;
+}
+
+.github-link-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-github {
+    display: inline-block;
+    background-color: var(--texte-principal);
+    color: var(--blanc);
+    padding: 15px 35px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05em;
+    transition: all 0.3s ease;
+}
+
+.btn-github:hover {
+    background-color: var(--rose-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.btn-github span {
+    font-size: 1.3em;
+    margin-right: 8px;
+}
+
+.projet-perso-bloc {
+    background-color: var(--blanc-casse);
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    border-left: 5px solid var(--rose-accent);
+}
+
+.projet-perso-bloc h2 {
+    color: var(--rose-hover);
+    margin-bottom: 20px;
+}
+
+.projet-perso-bloc h3 {
+    color: var(--texte-principal);
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.projet-perso-description {
+    font-size: 1.05em;
+    margin-bottom: 20px;
+}
+
+.projet-perso-steps {
+    line-height: 1.8;
+    margin-left: 20px;
+}
+
+.projet-perso-steps li {
+    margin-bottom: 12px;
+}
+
+.projet-perso-steps ul {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.resultats-box {
+    background-color: var(--rose-pale);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.resultats-box p {
+    margin: 8px 0;
+    font-size: 1.05em;
+}
+
+.projet-perso-link {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.projetsperso-conclusion {
+    background-color: var(--rose-pale);
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.projetsperso-conclusion h2 {
+    color: var(--rose-hover);
+    margin-bottom: 20px;
 }
 
 /* ========================================

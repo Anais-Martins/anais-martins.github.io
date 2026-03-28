@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets personnels - Anaïs Martins</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">Anaïs Martins</a>
+                    <span class="nav-logo-separator">|</span>
+                    <span class="nav-logo-subtitle">BTS SIO SLAM</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="apropos.html" class="nav-link">À propos</a></li>
+                    <li><a href="parcours.html" class="nav-link">Parcours</a></li>
+                    <li><a href="ecole.html" class="nav-link">École</a></li>
+                    <li><a href="entreprise.html" class="nav-link">Entreprise</a></li>
+                    <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+                    <li><a href="projetsperso.html" class="nav-link active">Projets perso</a></li>
+                    <li><a href="veille.html" class="nav-link">Veille</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="projetsperso-section">
+            <div class="container">
+                <h1>Projets personnels - Machine Learning & Data Science</h1>
+
+                <!-- Introduction -->
+                <div class="projetsperso-intro">
+                    <h2>Ma démarche d'apprentissage en autodidacte</h2>
+                    <p>
+                        En parallèle de ma formation BTS SIO SLAM, je me forme en autodidacte au <strong>Machine Learning 
+                        et à la Data Science</strong> pour préparer ma poursuite d'études en Bachelor Data Science / IA.
+                    </p>
+                    <p>
+                        J'apprends via des cours en ligne, de la documentation technique et surtout par la pratique : 
+                        je participe à des compétitions <strong>Kaggle</strong> pour travailler sur des datasets réels 
+                        et développer mes compétences en analyse de données, prétraitement, modélisation et évaluation 
+                        de modèles.
+                    </p>
+                    <p>
+                        Tous mes projets sont publiés en open source sur mon <strong>GitHub</strong>, avec du code 
+                        commenté et documenté pour partager ma progression et mes apprentissages.
+                    </p>
+                    
+                    <div class="github-link-container">
+                        <a href="https://github.com/votre-username" target="_blank" class="btn-github">
+                            <span>📂</span> Voir tous mes projets sur GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Projet 1 : Titanic -->
+                <div class="projet-perso-bloc">
+                    <h2>🚢 Projet 1 : Prédiction de survie sur le Titanic</h2>
+                    
+                    <div class="projet-perso-header">
+                        <p class="projet-perso-description">
+                            <strong>Premier projet d'initiation au Machine Learning</strong> réalisé sur le dataset 
+                            Kaggle Titanic.
+                        </p>
+                    </div>
+
+                    <h3>Objectif</h3>
+                    <p>
+                        Prédire quels passagers ont survécu au naufrage du Titanic à partir de leurs données 
+                        personnelles : âge, sexe, classe sociale, port d'embarquement, nombre de proches à bord, etc.
+                    </p>
+
+                    <h3>Démarche</h3>
+                    <ol class="projet-perso-steps">
+                        <li><strong>Exploration des données (EDA)</strong> : Analyse des variables et création de visualisations pour comprendre les patterns</li>
+                        <li><strong>Nettoyage des données</strong> : Gestion des valeurs manquantes (âge, cabine, port d'embarquement), encodage des variables catégorielles</li>
+                        <li><strong>Modélisation</strong> : Entraînement d'un modèle Random Forest Classifier avec scikit-learn</li>
+                        <li><strong>Évaluation</strong> : Mesure de la précision sur un set de validation puis soumission Kaggle</li>
+                    </ol>
+
+                    <h3>Résultats</h3>
+                    <div class="resultats-box">
+                        <p><strong>Accuracy (validation) :</strong> 82.68%</p>
+                        <p><strong>Score Kaggle (test réel) :</strong> 73.92%</p>
+                    </div>
+                    <p>
+                        Ce premier projet m'a permis de comprendre le pipeline complet d'un projet ML : de l'exploration 
+                        des données brutes jusqu'à l'entraînement et l'évaluation d'un modèle prédictif.
+                    </p>
+
+                    <h3>Technologies utilisées</h3>
+                    <div class="technologies-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">pandas</span>
+                        <span class="tech-tag">numpy</span>
+                        <span class="tech-tag">matplotlib</span>
+                        <span class="tech-tag">seaborn</span>
+                        <span class="tech-tag">scikit-learn</span>
+                    </div>
+
+                    <div class="projet-perso-link">
+                        <a href="https://github.com/votre-username/ML-Titanic" target="_blank" class="btn">
+                            Voir le code sur GitHub →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Projet 2 : House Prices -->
+                <div class="projet-perso-bloc">
+                    <h2>🏠 Projet 2 : Prédiction de prix immobiliers</h2>
+                    
+                    <div class="projet-perso-header">
+                        <p class="projet-perso-description">
+                            <strong>Deuxième projet d'initiation au Machine Learning</strong>, réalisé sur le dataset 
+                            Kaggle "House Prices - Advanced Regression Techniques".
+                        </p>
+                    </div>
+
+                    <h3>Objectif</h3>
+                    <p>
+                        Prédire le prix de vente de maisons à partir de <strong>76 variables</strong> : superficie, 
+                        qualité de construction, année de construction, type de quartier, nombre de pièces, présence 
+                        d'un garage, d'une piscine, état général, etc.
+                    </p>
+
+                    <h3>Démarche</h3>
+                    <ol class="projet-perso-steps">
+                        <li>
+                            <strong>Exploration des données (EDA)</strong> : Dataset de 1460 maisons avec 81 variables. 
+                            Analyse de la distribution des prix (asymétrique, médiane à 163 000$). Identification de 
+                            19 colonnes avec valeurs manquantes.
+                        </li>
+                        <li>
+                            <strong>Nettoyage des données</strong> : 
+                            <ul>
+                                <li>Suppression des colonnes avec trop de manquants (>80%) : PoolQC, Alley, Fence, MiscFeature</li>
+                                <li>Remplacement des NaN par "None" ou 0 quand ils signifient une absence (garage, sous-sol, cheminée)</li>
+                                <li>Remplacement par la médiane pour les vraies valeurs manquantes (LotFrontage)</li>
+                                <li>Encodage des variables texte en nombres via .cat.codes</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Modélisation</strong> : Algorithme Random Forest Regressor avec 100 arbres de décision. 
+                            Séparation train/validation 80% / 20%.
+                        </li>
+                        <li>
+                            <strong>Évaluation</strong> : Métriques MAE (Mean Absolute Error) et RMSE pour mesurer 
+                            la précision des prédictions en dollars.
+                        </li>
+                    </ol>
+
+                    <h3>Résultats</h3>
+                    <div class="resultats-box">
+                        <p><strong>MAE (validation) :</strong> environ 17 465 $ (erreur moyenne)</p>
+                        <p><strong>RMSE (validation) :</strong> environ 28 342 $ (pénalise davantage les grosses erreurs)</p>
+                        <p><strong>Précision relative :</strong> Erreur moyenne d'environ 10% par rapport au prix médian (163 000$)</p>
+                    </div>
+                    <p>
+                        Ce projet m'a permis d'approfondir mes compétences en feature engineering (gestion intelligente 
+                        des valeurs manquantes selon leur signification) et en régression (prédire une valeur continue 
+                        plutôt qu'une catégorie).
+                    </p>
+
+                    <h3>Technologies utilisées</h3>
+                    <div class="technologies-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">pandas</span>
+                        <span class="tech-tag">numpy</span>
+                        <span class="tech-tag">matplotlib</span>
+                        <span class="tech-tag">seaborn</span>
+                        <span class="tech-tag">scikit-learn</span>
+                    </div>
+
+                    <div class="projet-perso-link">
+                        <a href="https://github.com/votre-username/ML-HousePrices" target="_blank" class="btn">
+                            Voir le code sur GitHub →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Conclusion / Prochaines étapes -->
+                <div class="projetsperso-conclusion">
+                    <h2>Prochaines étapes</h2>
+                    <p>
+                        Je continue à me former sur des sujets plus avancés : deep learning avec TensorFlow/Keras, 
+                        traitement du langage naturel (NLP), computer vision, et manipulation de datasets plus complexes.
+                    </p>
+                    <p>
+                        Mon objectif est d'acquérir une base solide en Machine Learning avant d'entamer mon Bachelor 
+                        Data Science / IA en septembre 2026, pour être opérationnelle rapidement en entreprise.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Anaïs Martins - Tous droits réservés</p>
+            <p><a href="mentions-legales.html" class="footer-link">Mentions légales</a></p>
+        </div>
+    </footer>
+</body>
+</html>
