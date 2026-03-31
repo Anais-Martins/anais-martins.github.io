@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Situation professionnelle #2 - Anaïs Martins</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">Anaïs Martins</a>
+                    <span class="nav-logo-separator">|</span>
+                    <span class="nav-logo-subtitle">BTS SIO SLAM</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="apropos.html" class="nav-link">À propos</a></li>
+                    <li><a href="parcours.html" class="nav-link">Parcours</a></li>
+                    <li><a href="ecole.html" class="nav-link">École</a></li>
+                    <li><a href="entreprise.html" class="nav-link">Entreprise</a></li>
+                    <li><a href="realisations.html" class="nav-link active">Réalisations</a></li>
+                    <li><a href="projetsperso.html" class="nav-link">Projets perso</a></li>
+                    <li><a href="veille.html" class="nav-link">Veille</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="projet-detail">
+            <div class="container">
+                
+                <a href="realisations.html" class="btn-retour">← Retour aux réalisations</a>
+
+                <h1>Situation professionnelle #2 - Application Desktop Tableau de bord Formations</h1>
+                
+                <div class="projet-bloc">
+                    <h2>Contexte</h2>
+                    <p><strong>Date :</strong> En cours (janvier 2026)</p>
+                    <p><strong>Cadre :</strong> École - Option SLAM - Suite du Projet 1</p>
+                    <p>
+                        Suite à l'application web de gestion de formations (Projet 1), le centre de formation aux 
+                        métiers du cinéma souhaite développer une application desktop JavaFX pour permettre aux 
+                        administrateurs et formateurs de consulter, suivre et analyser les données de formation 
+                        depuis un client lourd.
+                    </p>
+                </div>
+
+                <div class="projet-bloc">
+                    <h2>Objectif</h2>
+                    <p>
+                        Créer une application desktop JavaFX (client lourd) qui se connecte à l'API REST du Projet 1 
+                        pour offrir aux administrateurs et formateurs une interface graphique permettant de visualiser 
+                        les formations, sessions, inscriptions, présences et avis, avec un tableau de bord analytique 
+                        et des graphiques.
+                    </p>
+                </div>
+
+                <div class="projet-bloc">
+                    <h2>Mon rôle</h2>
+                    <p>Développeuse full-stack - Travail individuel de conception et réalisation.</p>
+                </div>
+
+                <div class="projet-bloc">
+                    <h2>Réalisations</h2>
+                    <ul class="realisations-liste">
+                        <li>Architecture MVC complète avec JavaFX et FXML (séparation Modèle/Vue/Contrôleur)</li>
+                        <li>Écrans développés en FXML : Login, Dashboard, Formations, Sessions, SessionDetail</li>
+                        <li>Système d'authentification sécurisée via API avec stockage du token JWT</li>
+                        <li>Communication avec l'API REST via HttpClient (GET, POST)</li>
+                        <li>Parsing JSON avec Gson pour sérialisation/désérialisation des entités (Formation, Session, Apprenant, Formateur, Inscription, Présence, Avis)</li>
+                        <li>Interface de consultation et recherche des formations et sessions avec filtres et tri</li>
+                        <li>Écran de détail de session : liste des apprenants inscrits, gestion des présences (cases à cocher), consultation des avis</li>
+                        <li>Tableau de bord graphique avec indicateurs clés : nombre de formations, sessions à venir, taux de présence moyen, moyenne des avis</li>
+                        <li>Graphiques interactifs : PieChart, BarChart, LineChart pour visualiser les données</li>
+                        <li>TableView paginées avec tri et recherche pour les listes de formations/sessions</li>
+                        <li>Gestion des erreurs réseau et API (API non disponible, JSON malformé, timeout)</li>
+                        <li>Utilisation de threads JavaFX pour ne pas bloquer l'interface lors des appels API</li>
+                        <li>Styles CSS uniformisés pour cohérence visuelle</li>
+                    </ul>
+                </div>
+
+                <div class="projet-bloc">
+                    <h2>Résultats</h2>
+                    <p>
+                        Application desktop JavaFX fonctionnelle connectée à l'API du Projet 1. Interface graphique 
+                        ergonomique et responsive permettant la consultation et l'analyse des données de formation. 
+                        Tableau de bord avec graphiques dynamiques offrant une vision synthétique de l'activité. 
+                        Gestion robuste des erreurs garantissant la stabilité de l'application.
+                    </p>
+                </div>
+
+                <div class="projet-bloc">
+                    <h2>Technologies</h2>
+                    <div class="technologies-tags">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">JavaFX</span>
+                        <span class="tech-tag">FXML</span>
+                        <span class="tech-tag">HttpClient</span>
+                        <span class="tech-tag">Gson</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">MVC</span>
+                        <span class="tech-tag">REST API</span>
+                    </div>
+                </div>
+
+                <div class="projet-bloc">
+                    <h2>Architecture technique</h2>
+                    
+                    <h3>Modèle (Model)</h3>
+                    <p>7 entités principales avec sérialisation/désérialisation JSON :</p>
+                    <ul class="realisations-liste">
+                        <li><strong>Formation</strong> : id, titre, description, durée, objectifs</li>
+                        <li><strong>Session</strong> : id, formationId, formateurId, dateDebut, dateFin</li>
+                        <li><strong>Formateur</strong> : id, nom, prénom, email</li>
+                        <li><strong>Apprenant</strong> : id, nom, prénom, email</li>
+                        <li><strong>Inscription</strong> : sessionId, apprenantId</li>
+                        <li><strong>Presence</strong> : sessionId, apprenantId, date, statut</li>
+                        <li><strong>Avis</strong> : sessionId, apprenantId, note, commentaire</li>
+                    </ul>
+
+                    <h3>Vue (View) - FXML</h3>
+                    <ul class="realisations-liste">
+                        <li><strong>Login.fxml</strong> : écran de connexion avec champs email/mot de passe</li>
+                        <li><strong>Dashboard.fxml</strong> : tableau de bord avec graphiques et indicateurs</li>
+                        <li><strong>Formations.fxml</strong> : liste des formations avec filtres et tri</li>
+                        <li><strong>Sessions.fxml</strong> : liste des sessions et détails</li>
+                        <li><strong>SessionDetail.fxml</strong> : suivi inscriptions, présences et avis</li>
+                    </ul>
+
+                    <h3>Contrôleur (Controller)</h3>
+                    <ul class="realisations-liste">
+                        <li><strong>LoginController</strong> : gestion connexion et stockage token JWT</li>
+                        <li><strong>DashboardController</strong> : récupération données API, calcul indicateurs, mise à jour graphiques</li>
+                        <li><strong>FormationsController</strong> : affichage, tri et filtrage formations</li>
+                        <li><strong>SessionsController</strong> : affichage et gestion sessions</li>
+                        <li><strong>SessionDetailController</strong> : gestion présences et consultation avis</li>
+                    </ul>
+                </div>
+
+                <div class="projet-bloc">
+                    <h2>Endpoints API utilisés</h2>
+                    <ul class="realisations-liste">
+                        <li><strong>POST /api/login</strong> : authentification et récupération token JWT</li>
+                        <li><strong>GET /api/formations</strong> : récupération liste formations</li>
+                        <li><strong>GET /api/sessions</strong> : récupération liste sessions</li>
+                        <li><strong>GET /api/sessions/{id}</strong> : détails session (inscriptions, présences, avis)</li>
+                    </ul>
+                </div>
+
+                <div class="projet-bloc">
+                    <h2>Compétences BTS SIO mobilisées</h2>
+                    <div class="competences-mobilisees">
+                        <div class="competence-mobilisee">
+                            <h3>✓ Répondre aux incidents et aux demandes d'assistance</h3>
+                            <p>Tests et validation de l'application, gestion des erreurs réseau et API.</p>
+                        </div>
+                        <div class="competence-mobilisee">
+                            <h3>✓ Développer la présence en ligne de l'organisation</h3>
+                            <p>Développement d'une application desktop professionnelle complémentaire à l'application web.</p>
+                        </div>
+                        <div class="competence-mobilisee">
+                            <h3>✓ Mettre à disposition des utilisateurs un service informatique</h3>
+                            <p>Développement et déploiement d'une application complète avec interface graphique ergonomique.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projet-download">
+                    <a href="projet-situation-pro-2.pdf" download class="btn">Télécharger le projet en PDF</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Anaïs Martins - Tous droits réservés</p>
+            <p><a href="mentions-legales.html" class="footer-link">Mentions légales</a></p>
+        </div>
+    </footer>
+</body>
+</html>
