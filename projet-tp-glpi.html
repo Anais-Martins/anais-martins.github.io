@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TP GLPI - Anaïs Martins</title>
+    <title>Déploiement d'un portail de support informatique (GLPI) - Anaïs Martins</title>
     <link href="style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,19 +36,94 @@
     <main>
         <section class="projet-detail">
             <div class="container">
-                
+
                 <a href="realisations.html" class="btn-retour">← Retour aux réalisations</a>
 
-                <h1>TP GLPI - Gestion de parc informatique</h1>
-                
+                <h1>Déploiement d'un portail de support informatique (GLPI)</h1>
+
                 <div class="projet-bloc">
-                    <h2>Projet à venir</h2>
-                    <p>Ce projet est actuellement en cours de réalisation. La documentation complète sera disponible prochainement.</p>
-                    <p><strong>Thématique :</strong> Installation et configuration de GLPI pour la gestion d'un parc informatique (inventaire, tickets, utilisateurs).</p>
+                    <h2>Contexte</h2>
+                    <p><strong>Date :</strong> À compléter</p>
+                    <p><strong>Cadre :</strong> École – Mini-projet individuel – Bloc 1</p>
+                    <p>
+                        Dans le contexte de l'entreprise fictive HelpCorp, déploiement complet d'un portail 
+                        de support interne GLPI sur un serveur Debian virtualisé, accessible depuis le navigateur 
+                        du poste hôte.
+                    </p>
+                </div>
+
+                <div class="projet-bloc">
+                    <h2>Objectif</h2>
+                    <p>
+                        Mettre en service un portail de gestion des incidents GLPI en déployant un environnement 
+                        serveur LAMP complet (Linux, Apache, MariaDB, PHP) sur une machine virtuelle Debian, 
+                        puis configurer les accès utilisateurs, simuler des tickets d'incidents et automatiser 
+                        les sauvegardes.
+                    </p>
+                </div>
+
+                <div class="projet-bloc">
+                    <h2>Mon rôle</h2>
+                    <p>Administratrice système – Travail individuel.</p>
+                </div>
+
+                <div class="projet-bloc">
+                    <h2>Réalisations</h2>
+                    <ul class="realisations-liste">
+                        <li>Création et configuration d'une machine virtuelle Debian 13 (VirtualBox, mode pont)</li>
+                        <li>Installation et configuration du serveur LAMP (Apache, MariaDB, PHP)</li>
+                        <li>Déploiement de GLPI 11.0.0 et configuration Apache (VirtualHost, .htaccess)</li>
+                        <li>Création et paramétrage de la base de données MariaDB dédiée</li>
+                        <li>Configuration des profils utilisateurs (administrateur, technicien, utilisateur standard)</li>
+                        <li>Simulation d'un ticket d'incident : ouverture, prise en charge, clôture</li>
+                        <li>Mise en place d'une sauvegarde automatisée via script Bash et tâche cron (quotidienne à 2h)</li>
+                        <li>Rédaction du rapport technique complet avec captures d'écran</li>
+                    </ul>
+                </div>
+
+                <div class="projet-bloc">
+                    <h2>Résultats</h2>
+                    <p>
+                        Portail GLPI opérationnel et accessible depuis le navigateur du poste hôte. 
+                        Gestion des incidents fonctionnelle avec simulation complète du cycle de vie d'un ticket. 
+                        Sauvegarde automatisée en place avec rétention de 7 jours et journalisation des opérations.
+                    </p>
+                </div>
+
+                <div class="projet-bloc">
+                    <h2>Technologies</h2>
+                    <div class="technologies-tags">
+                        <span class="tech-tag">Linux / Debian</span>
+                        <span class="tech-tag">Apache</span>
+                        <span class="tech-tag">MariaDB</span>
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">GLPI</span>
+                        <span class="tech-tag">Bash</span>
+                        <span class="tech-tag">Cron</span>
+                        <span class="tech-tag">VirtualBox</span>
+                    </div>
+                </div>
+
+                <div class="projet-bloc">
+                    <h2>Compétences BTS SIO mobilisées</h2>
+                    <div class="competences-mobilisees">
+                        <div class="competence-mobilisee">
+                            <h3>✓ Gérer le patrimoine informatique</h3>
+                            <p>Déploiement et administration d'un service de gestion de parc et d'incidents.</p>
+                        </div>
+                        <div class="competence-mobilisee">
+                            <h3>✓ Répondre aux incidents et aux demandes d'assistance</h3>
+                            <p>Configuration de GLPI et simulation du cycle complet de traitement d'un ticket.</p>
+                        </div>
+                        <div class="competence-mobilisee">
+                            <h3>✓ Mettre à disposition des utilisateurs un service informatique</h3>
+                            <p>Installation, configuration et mise en service d'un portail web accessible au réseau interne.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="projet-download">
-                    <a href="doc-a-venir.pdf" target="_blank" class="btn">Documentation à venir</a>
+                    <a href="doc-a-venir.pdf" target="_blank" class="btn">Télécharger le rapport en PDF</a>
                 </div>
 
             </div>
