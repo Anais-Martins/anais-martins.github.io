@@ -978,7 +978,49 @@ footer p {
     text-align: center;
     font-size: 1.15em;
     margin-bottom: 50px;
-    white-space: nowrap;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: 50px 0;
+}
+
+.contact-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 35px 45px;
+    background-color: var(--rose-pale);
+    border-radius: 20px;
+    text-decoration: none;
+    color: var(--texte-principal);
+    font-weight: 600;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    min-width: 160px;
+    text-align: center;
+}
+
+.contact-btn:hover {
+    background-color: var(--rose-accent);
+    color: var(--blanc);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(232, 180, 184, 0.4);
+}
+
+.contact-btn svg {
+    width: 48px;
+    height: 48px;
+    fill: var(--rose-accent);
+    transition: fill 0.3s ease;
+}
+
+.contact-btn:hover svg {
+    fill: var(--blanc);
 }
 
 .contact-info {
