@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Épreuve E6 - Anaïs Martins</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">Anaïs Martins</a>
+                    <span class="nav-logo-separator">|</span>
+                    <span class="nav-logo-subtitle">BTS SIO SLAM</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="apropos.html" class="nav-link">À propos</a></li>
+                    <li><a href="parcours.html" class="nav-link">Parcours</a></li>
+                    <li><a href="ecole.html" class="nav-link">École</a></li>
+                    <li><a href="entreprise.html" class="nav-link">Entreprise</a></li>
+                    <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+                    <li><a href="epreuve-e6.html" class="nav-link active">Épreuve E6</a></li>
+                    <li><a href="veille.html" class="nav-link">Veille</a></li>
+                    <li><a href="projetsperso.html" class="nav-link">Projets perso</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="parcours-section">
+            <div class="container">
+                <h1>Épreuve E6</h1>
+
+                <div class="parcours-bloc">
+                    <h2>Qu'est-ce que l'épreuve E6 ?</h2>
+                    <p>
+                        L'épreuve E6 — <strong>Conception et développement d'applications</strong> — est une épreuve 
+                        orale du BTS SIO option SLAM. Elle consiste à présenter deux réalisations professionnelles 
+                        devant un jury de professionnels, réalisées en cours de formation.
+                    </p>
+                    <p>
+                        Chaque réalisation est formalisée dans une <strong>fiche descriptive officielle</strong> 
+                        (annexe 9-1-B) qui détaille le contexte, les compétences mobilisées, les ressources utilisées 
+                        et les productions réalisées. Le candidat doit être capable de présenter et défendre 
+                        techniquement ses deux projets face au jury.
+                    </p>
+                    <p>
+                        Les compétences évaluées sont celles du bloc <strong>« Conception et développement 
+                        d'applications »</strong> du référentiel BTS SIO SLAM :
+                    </p>
+                    <ul class="veille-liste">
+                        <li><strong>Concevoir et développer une solution applicative</strong></li>
+                        <li><strong>Assurer la maintenance corrective ou évolutive d'une solution applicative</strong></li>
+                        <li><strong>Gérer les données</strong></li>
+                    </ul>
+                </div>
+
+                <!-- Situation pro 1 -->
+                <div class="parcours-bloc">
+                    <h2>Situation professionnelle #1</h2>
+                    <h3>Application Web de Gestion de Formations – Architecture Client Léger (MVC)</h3>
+                    <p>
+                        Dans le contexte fictif de l'École du cinéma de Toulouse, développement d'une application 
+                        web complète permettant de centraliser la gestion des formations, des apprenants, des formateurs, 
+                        des cours et des inscriptions. L'application repose sur une architecture MVC avec Node.js, 
+                        Express et Sequelize, une base de données MySQL de 14 tables, une API REST complète et 
+                        une interface responsive Bootstrap. Un système d'authentification par rôle (Admin, Formateur, 
+                        Apprenant) et une sécurisation HTTPS ont également été mis en place.
+                    </p>
+
+                    <h3>Compétences mobilisées</h3>
+                    <ul class="veille-liste">
+                        <li><strong>Concevoir et développer une solution applicative</strong> : développement fullstack en architecture MVC, de la modélisation de la base de données à l'interface utilisateur</li>
+                        <li><strong>Assurer la maintenance corrective ou évolutive d'une solution applicative</strong> : tests, débogage et évolutions des fonctionnalités tout au long du développement</li>
+                        <li><strong>Gérer les données</strong> : conception d'une base de données relationnelle MySQL avec 14 tables et associations complexes via Sequelize</li>
+                    </ul>
+
+                    <div class="cv-download">
+                        <a href="projet-situation-pro-1.html" class="btn">Voir le détail du projet</a>
+                    </div>
+                </div>
+
+                <!-- Situation pro 2 -->
+                <div class="parcours-bloc">
+                    <h2>Situation professionnelle #2</h2>
+                    <h3>Application Desktop de Gestion de Formations – Architecture Client Lourd (MVC + FXML)</h3>
+                    <p>
+                        Dans la continuité du projet web, développement d'une application desktop JavaFX consommant 
+                        l'API REST du projet 1 via des appels HTTP. L'application propose trois tableaux de bord 
+                        statistiques adaptés selon le rôle connecté : l'administrateur visualise les KPIs globaux 
+                        et les inscriptions récentes, le formateur accède aux statistiques de ses élèves et à la 
+                        répartition des notes, l'apprenant consulte sa moyenne et son taux de présence. Les données 
+                        sont désérialisées depuis l'API avec Gson et affichées dynamiquement via des graphiques 
+                        PieChart et BarChart.
+                    </p>
+
+                    <h3>Compétences mobilisées</h3>
+                    <ul class="veille-liste">
+                        <li><strong>Concevoir et développer une solution applicative</strong> : développement d'une application desktop JavaFX en architecture MVC avec FXML, intégrant des graphiques dynamiques et une gestion de session</li>
+                        <li><strong>Assurer la maintenance corrective ou évolutive d'une solution applicative</strong> : consommation et adaptation aux évolutions de l'API REST du projet 1, tests et débogage</li>
+                        <li><strong>Gérer les données</strong> : désérialisation JSON, exploitation des données via l'API REST et affichage statistique dynamique (KPIs, graphiques, tableaux)</li>
+                    </ul>
+
+                    <div class="cv-download">
+                        <a href="projet-situation-pro-2.html" class="btn">Voir le détail du projet</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Anaïs Martins - Tous droits réservés</p>
+            <p><a href="mentions-legales.html" class="footer-link">Mentions légales</a></p>
+        </div>
+    </footer>
+</body>
+</html>
