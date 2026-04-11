@@ -48,14 +48,14 @@ body {
 .nav-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 15px 30px;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .nav-logo a {
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: 700;
     color: var(--texte-principal);
     text-decoration: none;
@@ -64,27 +64,29 @@ body {
 .nav-logo-separator {
     color: var(--texte-secondaire);
     font-weight: 400;
-    margin: 0 10px;
-    font-size: 1.5em;
+    margin: 0 8px;
+    font-size: 1.2em;
 }
 
 .nav-logo-subtitle {
     font-weight: 400;
     color: var(--texte-secondaire);
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 18px;
 }
 
 .nav-link {
     color: var(--texte-secondaire);
     text-decoration: none;
     font-weight: 400;
+    font-size: 0.9em;
     transition: color 0.3s ease;
+    white-space: nowrap;
 }
 
 .nav-link:hover {
