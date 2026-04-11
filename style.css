@@ -52,10 +52,16 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: nowrap;
+}
+
+.nav-logo {
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .nav-logo a {
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: 700;
     color: var(--texte-principal);
     text-decoration: none;
@@ -64,27 +70,28 @@ body {
 .nav-logo-separator {
     color: var(--texte-secondaire);
     font-weight: 400;
-    margin: 0 8px;
-    font-size: 1.2em;
+    margin: 0 6px;
+    font-size: 1.1em;
 }
 
 .nav-logo-subtitle {
     font-weight: 400;
     color: var(--texte-secondaire);
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 18px;
+    gap: 14px;
+    flex-wrap: nowrap;
 }
 
 .nav-link {
     color: var(--texte-secondaire);
     text-decoration: none;
     font-weight: 400;
-    font-size: 0.9em;
+    font-size: 0.82em;
     transition: color 0.3s ease;
     white-space: nowrap;
 }
