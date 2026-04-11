@@ -43,39 +43,71 @@
 
                 <div class="projet-bloc">
                     <h2>Contexte</h2>
-                    <p><strong>Date :</strong> À compléter</p>
-                    <p><strong>Cadre :</strong> École – Situation professionnelle pour l'épreuve E6 du BTS SIO</p>
-                    <p>À compléter</p>
+                    <p><strong>Date :</strong> 01/12/2025 au 04/04/2026</p>
+                    <p><strong>Cadre :</strong> École – IRIS Mediaschool Toulouse – Épreuve E6 du BTS SIO SLAM</p>
+                    <p><strong>Organisation support :</strong> École du cinéma de Toulouse (contexte fictif)</p>
+                    <p><strong>Modalité :</strong> Travail individuel</p>
+                    <p>
+                        Dans la continuité du projet web (Situation pro #1), l'École du cinéma de Toulouse souhaitait 
+                        disposer d'une application desktop permettant de visualiser des statistiques de gestion : 
+                        taux de présence, moyennes des apprenants, répartition des notes. L'application consomme 
+                        l'API REST du projet web via des appels HTTP.
+                    </p>
                 </div>
 
                 <div class="projet-bloc">
                     <h2>Objectif</h2>
-                    <p>Application Desktop de gestion de formations développée avec JavaFX.</p>
+                    <p>
+                        Développer une application desktop JavaFX en architecture client lourd (MVC + FXML), 
+                        consommant l'API REST du projet 1, avec trois tableaux de bord statistiques adaptés 
+                        selon le rôle de l'utilisateur connecté (Admin, Formateur, Apprenant).
+                    </p>
                 </div>
 
                 <div class="projet-bloc">
                     <h2>Mon rôle</h2>
-                    <p>À compléter</p>
+                    <p>Développeuse desktop – Travail individuel. Conception et développement de l'application JavaFX, des services de consommation d'API et des tableaux de bord statistiques.</p>
                 </div>
 
                 <div class="projet-bloc">
                     <h2>Réalisations</h2>
                     <ul class="realisations-liste">
-                        <li>À compléter</li>
+                        <li>Développement de 3 tableaux de bord selon le rôle connecté, chacun avec son Controller FXML, son Service et ses modèles Java</li>
+                        <li><strong>Dashboard Admin :</strong> KPIs globaux (nombre d'apprenants, formateurs, formations, taux de présence global), graphique BarChart des inscrits par formation, PieChart de répartition des utilisateurs, tableau des dernières inscriptions</li>
+                        <li><strong>Dashboard Formateur :</strong> matière enseignée, nombre d'élèves suivis, moyenne de la promotion, PieChart de répartition des notes, tableau des cours planifiés, tableau des élèves avec moyenne et taux de présence individuels</li>
+                        <li><strong>Dashboard Apprenant :</strong> formation suivie, moyenne générale personnelle, taux de présence personnel, PieChart de répartition de ses notes, BarChart de sa moyenne par matière</li>
+                        <li>Mise en place d'appels HTTP GET vers l'API REST (localhost:3001) via HttpURLConnection</li>
+                        <li>Désérialisation des réponses JSON avec la bibliothèque Gson</li>
+                        <li>Système de session (SessionUser) pour conserver les informations de l'utilisateur connecté entre les vues</li>
+                        <li>Fenêtre de login avec authentification par rôle</li>
                     </ul>
                 </div>
 
                 <div class="projet-bloc">
                     <h2>Résultats</h2>
-                    <p>À compléter</p>
+                    <p>
+                        Application desktop fonctionnelle avec 3 dashboards opérationnels selon le rôle connecté. 
+                        Affichage des KPIs en temps réel depuis l'API REST. Graphiques (PieChart, BarChart) générés 
+                        dynamiquement à partir des données. Tableau des élèves et de leurs statistiques disponible 
+                        pour le formateur. Code source structuré en architecture MVC et documenté.
+                    </p>
                 </div>
 
                 <div class="projet-bloc">
                     <h2>Technologies</h2>
                     <div class="technologies-tags">
                         <span class="tech-tag">Java</span>
-                        <span class="tech-tag">JavaFX</span>
-                        <span class="tech-tag">Application Desktop</span>
+                        <span class="tech-tag">JavaFX 25</span>
+                        <span class="tech-tag">FXML</span>
+                        <span class="tech-tag">Gson 2.13.1</span>
+                        <span class="tech-tag">Jackson 2.15.2</span>
+                        <span class="tech-tag">HttpURLConnection</span>
+                        <span class="tech-tag">API REST</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">phpMyAdmin</span>
+                        <span class="tech-tag">XAMPP</span>
+                        <span class="tech-tag">Visual Studio Code</span>
+                        <span class="tech-tag">JDK 25</span>
                     </div>
                 </div>
 
@@ -83,22 +115,26 @@
                     <h2>Compétences BTS SIO mobilisées</h2>
                     <div class="competences-mobilisees">
                         <div class="competence-mobilisee">
-                            <h3>✓ Répondre aux incidents et aux demandes d'assistance</h3>
-                            <p>À compléter</p>
+                            <h3>✓ Concevoir et développer une solution applicative</h3>
+                            <p>Développement d'une application desktop JavaFX en architecture MVC avec FXML, intégrant des graphiques dynamiques et une gestion de session.</p>
                         </div>
                         <div class="competence-mobilisee">
-                            <h3>✓ Développer la présence en ligne de l'organisation</h3>
-                            <p>À compléter</p>
+                            <h3>✓ Assurer la maintenance corrective ou évolutive d'une solution applicative</h3>
+                            <p>Consommation et adaptation aux évolutions de l'API REST du projet 1, tests et débogage.</p>
                         </div>
                         <div class="competence-mobilisee">
-                            <h3>✓ Mettre à disposition des utilisateurs un service informatique</h3>
-                            <p>À compléter</p>
+                            <h3>✓ Gérer les données</h3>
+                            <p>Désérialisation JSON, exploitation des données via l'API REST et affichage statistique dynamique (KPIs, graphiques, tableaux).</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="projet-download">
-                    <a href="doc-a-venir.pdf" target="_blank" class="btn">Télécharger le projet en PDF</a>
+                    <a href="fiche-situation-pro-2.pdf" target="_blank" class="btn">Fiche descriptive de réalisation professionnelle</a>
+                    <a href="https://github.com/Anais-Martins" target="_blank" class="btn">Accéder au code sur Github</a>
+                    <a href="doc-a-venir.zip" target="_blank" class="btn">Télécharger le dossier ZIP complet de l'application</a>
+                    <a href="doc-a-venir.pdf" target="_blank" class="btn">Documentation de développement</a>
+                    <a href="doc-a-venir.mp4" target="_blank" class="btn">Vidéo démo</a>
                 </div>
 
             </div>
