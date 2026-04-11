@@ -64,7 +64,7 @@ body {
 }
 
 .nav-logo a {
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-weight: 700;
     color: var(--texte-principal);
     text-decoration: none;
@@ -77,7 +77,7 @@ body {
 .nav-logo-subtitle {
     font-weight: 400;
     color: var(--texte-secondaire);
-    font-size: 0.85em;
+    font-size: 1em;
 }
 
 .nav-menu {
