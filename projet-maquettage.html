@@ -44,38 +44,65 @@
 
                 <div class="projet-bloc">
                     <h2>Contexte</h2>
-                    <p><strong>Date :</strong> À compléter</p>
+                    <p><strong>Date :</strong> 01/04/2026 au 02/04/2026</p>
                     <p><strong>Cadre :</strong> Entreprise – CIAG</p>
-                    <p>À compléter</p>
+                    <p>
+                        CIAG est une ESN qui intègre le logiciel de gestion Divalto (ERP/CRM) chez ses clients. 
+                        Dans le cadre d'une demande client, j'interviens sur la pièce comptable <strong>commande</strong> 
+                        pour modifier sa maquette d'impression via le SDK Harmony.
+                    </p>
+                    <p>
+                        Le client souhaite deux modifications : remplacer le champ <strong>INCOTERMS</strong> 
+                        (situé sous le cartouche de coordonnées du destinataire) par le <strong>Code affaire</strong>, 
+                        et que ce champ soit automatiquement traduit lors de la génération d'une commande 
+                        pour un client étranger, en fonction de la langue paramétrée dans sa fiche client.
+                    </p>
                 </div>
 
                 <div class="projet-bloc">
                     <h2>Objectif</h2>
-                    <p>À compléter</p>
+                    <p>
+                        Modifier la maquette de la pièce commande dans le SDK Divalto pour remplacer le champ 
+                        INCOTERMS par le Code affaire, et implémenter la traduction automatique de ce libellé 
+                        selon la langue du client destinataire.
+                    </p>
                 </div>
 
                 <div class="projet-bloc">
                     <h2>Mon rôle</h2>
-                    <p>À compléter</p>
+                    <p>Développeuse / Intégratrice Divalto – Travail individuel.</p>
                 </div>
 
                 <div class="projet-bloc">
                     <h2>Réalisations</h2>
                     <ul class="realisations-liste">
-                        <li>À compléter</li>
+                        <li>Génération d'une commande dans Divalto pour identifier, à partir de l'impression, le fichier maquette concerné</li>
+                        <li>Création d'un nouveau champ dans la base de données : <code>ci_lib10</code> (12 caractères) dans la table <code>ci_trav</code>, destiné à accueillir le libellé du Code affaire</li>
+                        <li>Ajout de l'instance du nouveau champ sur la maquette dans le SDK Harmony</li>
+                        <li>Ajout de la traduction du libellé dans le traitement de la maquette (code), pour chacune des langues concernées</li>
+                        <li>Création de commandes de test dans Divalto avec des clients paramétrés en différentes langues</li>
+                        <li>Tests d'impression sur les différentes commandes générées et vérification du rendu</li>
                     </ul>
                 </div>
 
                 <div class="projet-bloc">
                     <h2>Résultats</h2>
-                    <p>À compléter</p>
+                    <ul class="veille-liste">
+                        <li><strong>Champ INCOTERMS remplacé par le Code affaire</strong> : la maquette affiche désormais le bon champ à l'emplacement souhaité par le client</li>
+                        <li><strong>Traduction automatique fonctionnelle</strong> : le libellé s'adapte à la langue paramétrée dans la fiche client lors de la génération de la commande</li>
+                        <li><strong>Tests concluants</strong> : vérification sur plusieurs commandes avec des clients de langues différentes, résultats conformes dans chaque cas</li>
+                        <li><strong>Livrable conforme au cahier des charges</strong> : la maquette est validée et prête à être déployée chez le client</li>
+                    </ul>
                 </div>
 
                 <div class="projet-bloc">
                     <h2>Technologies</h2>
                     <div class="technologies-tags">
-                        <span class="tech-tag">Divalto</span>
-                        <span class="tech-tag">Entreprise</span>
+                        <span class="tech-tag">Divalto Infinity</span>
+                        <span class="tech-tag">Harmony SDK</span>
+                        <span class="tech-tag">SQL Server</span>
+                        <span class="tech-tag">Maquettage</span>
+                        <span class="tech-tag">Tests</span>
                     </div>
                 </div>
 
@@ -83,18 +110,18 @@
                     <h2>Compétences BTS SIO mobilisées</h2>
                     <div class="competences-mobilisees">
                         <div class="competence-mobilisee">
-                            <h3>✓ Répondre aux incidents et aux demandes d'assistance</h3>
-                            <p>À compléter</p>
+                            <h3>✓ Répondre aux incidents et aux demandes d'assistance et d'évolution</h3>
+                            <p>Prise en charge d'une demande d'évolution client, analyse du besoin, modification et livraison d'une maquette conforme.</p>
                         </div>
                         <div class="competence-mobilisee">
                             <h3>✓ Mettre à disposition des utilisateurs un service informatique</h3>
-                            <p>À compléter</p>
+                            <p>Tests d'impression sur plusieurs cas de figure, validation du livrable et mise à disposition d'une maquette fonctionnelle et conforme.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="projet-download">
-                    <a href="doc-a-venir.pdf" target="_blank" class="btn">Accéder au projet en PDF</a>
+                    <a href="doc-a-venir.pdf" target="_blank" class="btn">Télécharger le projet en PDF</a>
                 </div>
 
             </div>
@@ -102,14 +129,14 @@
     </main>
 
     <footer>
-    <div class="footer-container">
-        <p>&copy; 2026 Anaïs Martins - Tous droits réservés</p>
-        <p>
-            <a href="mentions-legales.html" class="footer-link">Mentions légales</a>
-            &nbsp;|&nbsp;
-            <a href="politique-confidentialite.html" class="footer-link">Politique de confidentialité</a>
-        </p>
-    </div>
-</footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Anaïs Martins - Tous droits réservés</p>
+            <p>
+                <a href="mentions-legales.html" class="footer-link">Mentions légales</a>
+                &nbsp;|&nbsp;
+                <a href="politique-confidentialite.html" class="footer-link">Politique de confidentialité</a>
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
