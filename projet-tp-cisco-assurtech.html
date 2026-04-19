@@ -44,31 +44,65 @@
 
                 <div class="projet-bloc">
                     <h2>Contexte</h2>
-                    <p><strong>Date :</strong> À compléter</p>
-                    <p><strong>Cadre :</strong> École – TP infrastructure réseau</p>
-                    <p>À compléter</p>
+                    <p><strong>Date :</strong> Mai 2025</p>
+                    <p><strong>Cadre :</strong> École – TP infrastructure réseau (Cisco Packet Tracer)</p>
+                    <p>
+                        AssurTech est une société d'assurance fictive implantée dans quatre villes françaises : 
+                        Toulouse (siège, Direction), Paris (Commercial, Financier), Marseille (Technique, Administratif) 
+                        et Bordeaux (Service Client, Recouvrement). Dans le cadre de ce TP, il s'agissait de concevoir 
+                        et de configurer de A à Z l'infrastructure réseau multi-sites de cette entreprise, en simulant 
+                        l'environnement sur Cisco Packet Tracer.
+                    </p>
                 </div>
 
                 <div class="projet-bloc">
                     <h2>Objectif</h2>
-                    <p>Concevoir et configurer une infrastructure réseau multi-sites avec segmentation par VLANs et routage inter-VLAN sur équipements Cisco.</p>
+                    <p>
+                        Concevoir et configurer une infrastructure réseau multi-sites avec segmentation par VLANs 
+                        et routage inter-VLAN sur équipements Cisco. L'objectif était de permettre à chaque service 
+                        de disposer de son propre réseau isolé (VLAN), tout en autorisant des communications 
+                        contrôlées entre sites via un routeur central (R5), avec des accès Wi-Fi internes et 
+                        invités distincts sur chaque site.
+                    </p>
                 </div>
 
                 <div class="projet-bloc">
                     <h2>Mon rôle</h2>
-                    <p>À compléter</p>
+                    <p>
+                        J'ai réalisé l'intégralité de ce TP de manière autonome : conception du plan d'adressage IP, 
+                        création et attribution des VLANs, configuration des switchs (mode trunk) et des routeurs 
+                        (sous-interfaces dot1Q), mise en place du DHCP par VLAN sur chaque routeur de site, 
+                        configuration du routage statique inter-sites via R5, déploiement des accès SSH sécurisés 
+                        sur chaque routeur, et mise en service des serveurs DNS et Web hébergés à Marseille.
+                    </p>
                 </div>
 
                 <div class="projet-bloc">
                     <h2>Réalisations</h2>
                     <ul class="realisations-liste">
-                        <li>À compléter</li>
+                        <li>Conception d'un plan d'adressage IP cohérent pour 4 sites (192.168.1.0/24 à 192.168.4.0/24) et 11 VLANs (VLAN 10 à 110)</li>
+                        <li>Configuration des VLANs sur les switchs de chaque site avec liens trunk (encapsulation 802.1Q) autorisant la communication inter-VLAN</li>
+                        <li>Configuration des sous-interfaces sur les routeurs de site (R1 à R4) avec encapsulation dot1Q pour le routage inter-VLAN local</li>
+                        <li>Mise en place des pools DHCP par VLAN sur chaque routeur (R1 à R4), avec exclusion des adresses de passerelle</li>
+                        <li>Configuration des réseaux Wi-Fi internes par service et Wi-Fi invités par site, avec SSIDs et mots de passe distincts</li>
+                        <li>Déploiement du routage statique sur le routeur central R5 pour interconnecter les quatre sites entre eux</li>
+                        <li>Configuration des routages statiques inter-VLANs sur R1 (Toulouse) et R4 (Paris) pour leur permettre de communiquer directement</li>
+                        <li>Déploiement d'accès SSH sécurisés sur les routeurs R1, R2, R3 et R4 (utilisateur : anais)</li>
+                        <li>Configuration du serveur DNS (domaine technique.local, IP 192.168.106.4) et du serveur Web (HTTP/HTTPS) dans le VLAN 60 à Marseille</li>
+                        <li>Rédaction d'une documentation technique complète (plan d'adressage, topologies logique et physique, règles de communication, configuration DHCP et routage)</li>
                     </ul>
                 </div>
 
                 <div class="projet-bloc">
                     <h2>Résultats</h2>
-                    <p>À compléter</p>
+                    <ul class="veille-liste">
+                        <li>Infrastructure fonctionnelle sur Cisco Packet Tracer : les 4 sites sont interconnectés et les 11 VLANs correctement segmentés</li>
+                        <li>Attribution automatique des adresses IP via DHCP opérationnelle sur l'ensemble des VLANs</li>
+                        <li>Communications inter-sites conformes aux règles définies : Toulouse ↔ Paris, et le service Technique de Marseille accessible depuis tous les sites</li>
+                        <li>Accès SSH sécurisé fonctionnel sur les 4 routeurs de site</li>
+                        <li>Serveurs DNS et Web opérationnels dans le VLAN Technique (Marseille), accessibles depuis les sites autorisés</li>
+                        <li>Isolation correcte des réseaux Wi-Fi invités vis-à-vis des réseaux internes sur chaque site</li>
+                    </ul>
                 </div>
 
                 <div class="projet-bloc">
@@ -76,8 +110,13 @@
                     <div class="technologies-tags">
                         <span class="tech-tag">Cisco</span>
                         <span class="tech-tag">VLANs</span>
-                        <span class="tech-tag">Routage</span>
+                        <span class="tech-tag">Routage statique</span>
                         <span class="tech-tag">Packet Tracer</span>
+                        <span class="tech-tag">DHCP</span>
+                        <span class="tech-tag">SSH</span>
+                        <span class="tech-tag">DNS</span>
+                        <span class="tech-tag">HTTP/HTTPS</span>
+                        <span class="tech-tag">802.1Q (dot1Q)</span>
                     </div>
                 </div>
 
@@ -86,11 +125,15 @@
                     <div class="competences-mobilisees">
                         <div class="competence-mobilisee">
                             <h3>✓ Gérer le patrimoine informatique</h3>
-                            <p>Conception et configuration d'une infrastructure réseau d'entreprise.</p>
+                            <p>Conception et configuration complète d'une infrastructure réseau d'entreprise multi-sites : plan d'adressage, VLANs, routeurs, switchs, serveurs.</p>
                         </div>
                         <div class="competence-mobilisee">
                             <h3>✓ Répondre aux incidents et aux demandes d'assistance</h3>
-                            <p>Diagnostic et résolution de problèmes réseau.</p>
+                            <p>Diagnostic et résolution de problèmes réseau lors de la configuration (routage, DHCP, communication inter-VLANs).</p>
+                        </div>
+                        <div class="competence-mobilisee">
+                            <h3>✓ Travailler en mode projet</h3>
+                            <p>Réalisation autonome de bout en bout, avec rédaction d'une documentation technique structurée restituant l'ensemble des choix de configuration.</p>
                         </div>
                     </div>
                 </div>
