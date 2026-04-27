@@ -8,247 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <style>
-        /* ── Styles spécifiques à cette page ── */
-        .projet-detail { padding: 60px 0 80px; }
-
-        .btn-retour {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            margin-bottom: 36px;
-            font-size: .9rem;
-            font-weight: 600;
-            color: var(--accent, #4f8ef7);
-            text-decoration: none;
-            transition: opacity .2s;
-        }
-        .btn-retour:hover { opacity: .7; }
-
-        h1 {
-            font-size: clamp(1.6rem, 3.5vw, 2.4rem);
-            font-weight: 700;
-            margin-bottom: 40px;
-            line-height: 1.25;
-        }
-
-        /* ── Blocs de contenu ── */
-        .projet-bloc {
-            background: #fff;
-            border: 1px solid #e8edf5;
-            border-radius: 12px;
-            padding: 32px 36px;
-            margin-bottom: 28px;
-            box-shadow: 0 2px 12px rgba(0,0,0,.04);
-        }
-        .projet-bloc h2 {
-            font-size: 1.15rem;
-            font-weight: 700;
-            margin-bottom: 16px;
-            color: #1a2340;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .projet-bloc h2::before {
-            content: '';
-            display: inline-block;
-            width: 4px;
-            height: 20px;
-            background: var(--accent, #4f8ef7);
-            border-radius: 2px;
-            flex-shrink: 0;
-        }
-        .projet-bloc p, .projet-bloc li { color: #3a4560; line-height: 1.75; font-size: .97rem; }
-        .projet-bloc ul { padding-left: 20px; }
-        .projet-bloc ul li { margin-bottom: 6px; }
-
-        /* ── Grille d'environnement ── */
-        .env-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 16px;
-            margin-top: 16px;
-        }
-        .env-card {
-            background: #f5f8ff;
-            border: 1px solid #d6e2ff;
-            border-radius: 10px;
-            padding: 20px 22px;
-        }
-        .env-card h3 { font-size: .9rem; font-weight: 700; color: #4f8ef7; margin-bottom: 8px; text-transform: uppercase; letter-spacing: .05em; }
-        .env-card p, .env-card ul { font-size: .88rem; color: #3a4560; }
-        .env-card ul { padding-left: 16px; margin: 0; }
-        .env-card ul li { margin-bottom: 4px; }
-
-        /* ── Structure AD ── */
-        .ad-sites {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 14px;
-            margin-top: 16px;
-        }
-        .ad-site-card {
-            border-radius: 10px;
-            padding: 18px 20px;
-            font-size: .88rem;
-        }
-        .ad-site-card.tls { background: #fff3e8; border: 1px solid #ffd1a3; }
-        .ad-site-card.par { background: #e8f4ff; border: 1px solid #a3d4ff; }
-        .ad-site-card.mrs { background: #e8ffe8; border: 1px solid #a3e8a3; }
-        .ad-site-card.bdx { background: #f5e8ff; border: 1px solid #d4a3ff; }
-        .ad-site-card h3 { font-size: .85rem; font-weight: 700; margin-bottom: 10px; }
-        .ad-site-card .ou-label { font-weight: 600; color: #555; }
-        .ad-site-card ul { padding-left: 14px; margin: 6px 0 0; }
-        .ad-site-card ul li { margin-bottom: 3px; color: #3a4560; }
-
-        /* ── Étapes de configuration ── */
-        .steps { counter-reset: step; }
-        .step {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 20px;
-            align-items: flex-start;
-        }
-        .step-number {
-            counter-increment: step;
-            content: counter(step);
-            flex-shrink: 0;
-            width: 38px;
-            height: 38px;
-            background: var(--accent, #4f8ef7);
-            color: #fff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: .9rem;
-        }
-        .step-content h3 { font-size: .95rem; font-weight: 700; margin-bottom: 4px; color: #1a2340; }
-        .step-content p { font-size: .9rem; color: #3a4560; margin: 0; line-height: 1.65; }
-
-        /* ── Dossiers partagés ── */
-        .shares-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: .9rem;
-            margin-top: 12px;
-        }
-        .shares-table th {
-            background: #f0f4ff;
-            padding: 10px 14px;
-            text-align: left;
-            font-weight: 700;
-            color: #1a2340;
-            border-bottom: 2px solid #d6e2ff;
-        }
-        .shares-table td {
-            padding: 10px 14px;
-            border-bottom: 1px solid #eef1f8;
-            color: #3a4560;
-            vertical-align: top;
-        }
-        .shares-table tr:last-child td { border-bottom: none; }
-        .shares-table tr:hover td { background: #fafbff; }
-        .path { font-family: monospace; font-size: .82rem; background: #f0f4ff; padding: 2px 6px; border-radius: 4px; }
-
-        /* ── GPO ── */
-        .gpo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 16px;
-            margin-top: 12px;
-        }
-        .gpo-card {
-            border-radius: 10px;
-            padding: 20px 22px;
-        }
-        .gpo-card.deploy { background: #e8f7ee; border: 1px solid #a3ddb8; }
-        .gpo-card.restrict { background: #fff0f0; border: 1px solid #ffb3b3; }
-        .gpo-card h3 { font-size: .9rem; font-weight: 700; margin-bottom: 10px; }
-        .gpo-card.deploy h3 { color: #2a7a4a; }
-        .gpo-card.restrict h3 { color: #c03030; }
-        .gpo-card ul { padding-left: 16px; margin: 0; font-size: .88rem; color: #3a4560; }
-        .gpo-card ul li { margin-bottom: 5px; }
-
-        /* ── DHCP info ── */
-        .dhcp-info {
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-            margin-top: 12px;
-        }
-        .dhcp-badge {
-            background: #f0f4ff;
-            border: 1px solid #d6e2ff;
-            border-radius: 8px;
-            padding: 10px 16px;
-            font-size: .88rem;
-            color: #1a2340;
-        }
-        .dhcp-badge strong { display: block; font-size: .75rem; text-transform: uppercase; letter-spacing: .06em; color: #4f8ef7; margin-bottom: 3px; }
-
-        /* ── Technologies ── */
-        .technologies-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
-        .tech-tag {
-            background: #4f8ef7;
-            color: #fff;
-            border-radius: 20px;
-            padding: 6px 16px;
-            font-size: .85rem;
-            font-weight: 600;
-        }
-
-        /* ── Compétences ── */
-        .competences-mobilisees { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 8px; }
-        .competence-mobilisee {
-            background: #f5f8ff;
-            border-left: 4px solid #4f8ef7;
-            border-radius: 0 8px 8px 0;
-            padding: 16px 18px;
-        }
-        .competence-mobilisee h3 { font-size: .9rem; font-weight: 700; color: #1a2340; margin-bottom: 6px; }
-        .competence-mobilisee p { font-size: .87rem; color: #3a4560; margin: 0; }
-
-        /* ── Problèmes / solutions ── */
-        .problems-list { list-style: none; padding: 0; margin-top: 8px; }
-        .problems-list li {
-            padding: 14px 16px 14px 48px;
-            position: relative;
-            border-bottom: 1px solid #eef1f8;
-            font-size: .92rem;
-            color: #3a4560;
-            line-height: 1.65;
-        }
-        .problems-list li:last-child { border-bottom: none; }
-        .problems-list li::before {
-            content: '⚠';
-            position: absolute;
-            left: 14px;
-            top: 14px;
-            font-size: 1rem;
-            color: #f0a030;
-        }
-
-        /* ── Bouton PDF ── */
-        .projet-download { margin-top: 16px; }
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #4f8ef7;
-            color: #fff;
-            padding: 12px 28px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: .95rem;
-            transition: background .2s, transform .15s;
-        }
-        .btn:hover { background: #2d6fdf; transform: translateY(-1px); }
-    </style>
 </head>
 <body>
     <header>
@@ -283,365 +42,102 @@
 
                 <h1>Administration d'un environnement Windows Server</h1>
 
-                <!-- CONTEXTE -->
                 <div class="projet-bloc">
                     <h2>Contexte</h2>
                     <p><strong>Date :</strong> Mai – Juillet 2025</p>
                     <p><strong>Cadre :</strong> École – TP administration système</p>
                     <p>
-                        Ce TP s'inscrit dans la continuité du TP Réseaux de l'entreprise fictive <strong>AssurTech</strong>.
-                        L'objectif était de mettre en place un environnement d'entreprise complet à l'aide de
-                        <strong>Windows Server 2019</strong> et <strong>Windows 10</strong> dans un laboratoire virtualisé sous
-                        <strong>VirtualBox</strong>, en simulant une infrastructure multi-sites réaliste.
+                        Ce TP fait suite au TP Réseaux de l'entreprise fictive AssurTech. Il s'agissait de mettre en place
+                        un environnement d'entreprise complet avec Windows Server 2019 et Windows 10 dans un laboratoire
+                        virtualisé sous VirtualBox, en simulant une infrastructure multi-sites avec gestion centralisée
+                        des utilisateurs, des ressources réseau et des stratégies de sécurité.
                     </p>
                 </div>
 
-                <!-- OBJECTIF -->
                 <div class="projet-bloc">
                     <h2>Objectif</h2>
                     <p>
-                        Déployer et administrer un environnement Windows Server complet pour la société AssurTech,
-                        comprenant la mise en place d'un Active Directory, la gestion des comptes utilisateurs,
-                        la configuration des services réseau (DNS, DHCP), la gestion des dossiers partagés avec
-                        permissions NTFS, et la définition de stratégies de groupe (GPO).
+                        Déployer et administrer un environnement Windows Server complet pour la société AssurTech :
+                        installation d'un contrôleur de domaine Active Directory, configuration des services DNS et DHCP,
+                        création de la structure organisationnelle (OUs, groupes, utilisateurs), gestion des dossiers
+                        partagés avec permissions NTFS, et déploiement de stratégies de groupe (GPO).
                     </p>
                 </div>
 
-                <!-- ENVIRONNEMENT VIRTUEL -->
-                <div class="projet-bloc">
-                    <h2>Environnement virtuel mis en place</h2>
-                    <p>L'environnement repose sur deux machines virtuelles interconnectées via un réseau NAT nommé <em>winsrv</em>, déployées sur <strong>VirtualBox</strong>.</p>
-                    <div class="env-grid">
-                        <div class="env-card">
-                            <h3>🖥 WS-SRV-DC01</h3>
-                            <p><strong>OS :</strong> Windows Server 2019 Standard Evaluation</p>
-                            <ul>
-                                <li>Contrôleur de domaine (ADDS)</li>
-                                <li>Serveur DNS</li>
-                                <li>Serveur DHCP</li>
-                                <li>IP statique : 192.168.200.4</li>
-                                <li>Domaine : assurtech.local</li>
-                            </ul>
-                        </div>
-                        <div class="env-card">
-                            <h3>💻 win_Client</h3>
-                            <p><strong>OS :</strong> Windows 10 Pro</p>
-                            <ul>
-                                <li>Poste client du domaine</li>
-                                <li>Configuration réseau via DHCP</li>
-                                <li>Utilisé pour tester les connexions, les droits d'accès et les GPO</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- MON RÔLE -->
                 <div class="projet-bloc">
                     <h2>Mon rôle</h2>
                     <p>
-                        J'ai réalisé l'intégralité de ce TP seule, de la configuration initiale du serveur jusqu'au
-                        déploiement des GPO. J'ai installé et paramétré chaque rôle Windows Server, créé l'ensemble
-                        de la structure Active Directory (OUs, groupes, utilisateurs), géré les partages réseau
-                        avec les permissions NTFS, et configuré les stratégies de groupe. J'ai également rédigé
-                        le rapport PDF illustré de captures d'écran couvrant toutes les étapes.
+                        J'ai réalisé l'intégralité de ce TP de manière autonome : configuration du serveur et promotion
+                        en contrôleur de domaine, mise en place des rôles ADDS, DNS et DHCP, création de la structure
+                        Active Directory reflétant les 4 sites d'AssurTech, configuration des dossiers partagés avec
+                        permissions par groupe, et déploiement des GPO de déploiement logiciel et de restriction CMD.
                     </p>
                 </div>
 
-                <!-- ÉTAPES DE CONFIGURATION -->
                 <div class="projet-bloc">
-                    <h2>Étapes de configuration</h2>
-                    <div class="steps">
-
-                        <div class="step">
-                            <div class="step-number">1</div>
-                            <div class="step-content">
-                                <h3>Configuration de l'adresse IP statique du serveur</h3>
-                                <p>Depuis "Local Server", désactivation d'IPv6 et saisie manuelle des paramètres IPv4 (192.168.200.4 / masque 255.255.255.0 / passerelle 192.168.200.1). DNS secondaire : 8.8.8.8. Renommage de la machine en <strong>WS-SRV-DC01</strong>.</p>
-                            </div>
-                        </div>
-
-                        <div class="step">
-                            <div class="step-number">2</div>
-                            <div class="step-content">
-                                <h3>Installation des rôles ADDS et DNS</h3>
-                                <p>Via le Gestionnaire de serveur > "Ajouter des rôles et fonctionnalités", installation des rôles <strong>Active Directory Domain Services (ADDS)</strong> et <strong>DNS</strong>. Promotion du serveur en contrôleur de domaine via l'assistant de configuration post-déploiement, création d'une nouvelle forêt avec le domaine <strong>assurtech.local</strong> (NetBIOS : ASSURTECH). Mot de passe DSRM : RobustPassword123!</p>
-                            </div>
-                        </div>
-
-                        <div class="step">
-                            <div class="step-number">3</div>
-                            <div class="step-content">
-                                <h3>Configuration du DNS</h3>
-                                <p>Création d'une zone de recherche inversée IPv4 (200.168.192.in-addr.arpa) depuis le Gestionnaire DNS. Activation des mises à jour dynamiques sécurisées (intégrées à Active Directory). Vérification du bon fonctionnement via la commande <code>nslookup</code> : résolution de <em>assurtech.local</em> vers 192.168.200.4 confirmée.</p>
-                            </div>
-                        </div>
-
-                        <div class="step">
-                            <div class="step-number">4</div>
-                            <div class="step-content">
-                                <h3>Installation et configuration du DHCP</h3>
-                                <p>Installation du rôle <strong>Serveur DHCP</strong>, autorisation dans Active Directory avec le compte ASSURTECH\Administrateur. Création de l'étendue <em>Plage-Clients</em> :</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- DHCP badges -->
-                    <div class="dhcp-info" style="margin-left: 58px; margin-top: 0; margin-bottom: 20px;">
-                        <div class="dhcp-badge"><strong>Plage distribuée</strong>192.168.200.10 → 192.168.200.60</div>
-                        <div class="dhcp-badge"><strong>Plage exclue</strong>192.168.200.40 → 192.168.200.60</div>
-                        <div class="dhcp-badge"><strong>Passerelle par défaut</strong>192.168.200.1</div>
-                        <div class="dhcp-badge"><strong>Serveur DNS</strong>192.168.200.4</div>
-                        <div class="dhcp-badge"><strong>Domaine parent</strong>assurtech.local</div>
-                        <div class="dhcp-badge"><strong>Réservation serveur AD</strong>192.168.200.4</div>
-                    </div>
-
-                    <div class="steps">
-                        <div class="step">
-                            <div class="step-number">5</div>
-                            <div class="step-content">
-                                <h3>Jonction du client Windows 10 au domaine</h3>
-                                <p>Configuration du client en DHCP (ipconfig /release → /renew → /all pour vérification). L'adresse 192.168.200.10 a été attribuée automatiquement. Jonction au domaine <em>assurtech.local</em> via Propriétés système > Modifier, authentification avec le compte administrateur du domaine. Vérification par <code>nslookup assurtech.local</code> depuis le client.</p>
-                            </div>
-                        </div>
-
-                        <div class="step">
-                            <div class="step-number">6</div>
-                            <div class="step-content">
-                                <h3>Création de la structure Active Directory</h3>
-                                <p>Via "Utilisateurs et ordinateurs Active Directory" : création des 4 unités d'organisation (OU), des groupes de sécurité par service, et des utilisateurs fictifs (2 par groupe minimum), puis ajout de chaque utilisateur dans son groupe correspondant.</p>
-                            </div>
-                        </div>
-
-                        <div class="step">
-                            <div class="step-number">7</div>
-                            <div class="step-content">
-                                <h3>Création des dossiers partagés et permissions NTFS</h3>
-                                <p>Via le Gestionnaire de serveur > Services de fichiers > Partages : création d'un dossier partagé par service (profil SMB-Rapide). Désactivation de l'héritage des permissions, suppression des entrées génériques, puis ajout du groupe de sécurité correspondant avec les droits Modification sur le dossier.</p>
-                            </div>
-                        </div>
-
-                        <div class="step">
-                            <div class="step-number">8</div>
-                            <div class="step-content">
-                                <h3>Configuration des GPO</h3>
-                                <p>Création de deux GPO distinctes via la "Gestion de stratégie de groupe" : une GPO de déploiement logiciel (liée à chaque OU) et une GPO de restriction CMD (liée à toutes les OU sauf Technique-MRS via filtrage de sécurité).</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- STRUCTURE ACTIVE DIRECTORY -->
-                <div class="projet-bloc">
-                    <h2>Structure Active Directory (organigramme AssurTech)</h2>
-                    <p>Le domaine <strong>assurtech.local</strong> est structuré en 4 unités d'organisation correspondant aux sites géographiques de l'entreprise.</p>
-                    <div class="ad-sites">
-
-                        <div class="ad-site-card tls">
-                            <h3>🟠 Toulouse — OU : TLS</h3>
-                            <span class="ou-label">Groupe : Direction-TLS</span>
-                            <ul>
-                                <li>mpagnol (Marcel Pagnol)</li>
-                                <li>lbellons (Lili Bellons)</li>
-                            </ul>
-                        </div>
-
-                        <div class="ad-site-card par">
-                            <h3>🔵 Paris — OU : PAR</h3>
-                            <span class="ou-label">Groupe : Commercial-PAR</span>
-                            <ul>
-                                <li>fmercury (Freddy Mercury)</li>
-                                <li>swilliams (Serena Williams)</li>
-                            </ul>
-                            <span class="ou-label" style="margin-top:8px;display:block;">Groupe : Financier-PAR</span>
-                            <ul>
-                                <li>nmandela (Nelson Mandela)</li>
-                                <li>aocasiocortez (A. Ocasio-Cortez)</li>
-                            </ul>
-                        </div>
-
-                        <div class="ad-site-card mrs">
-                            <h3>🟢 Marseille — OU : MRS</h3>
-                            <span class="ou-label">Groupe : Technique-MRS</span>
-                            <ul>
-                                <li>jlennon (John Lennon)</li>
-                                <li>pmccartney (Paul McCartney)</li>
-                            </ul>
-                            <span class="ou-label" style="margin-top:8px;display:block;">Groupe : Administratif-MRS</span>
-                            <ul>
-                                <li>nsimone (Nina Simone)</li>
-                                <li>spaulson (Sarah Paulson)</li>
-                            </ul>
-                        </div>
-
-                        <div class="ad-site-card bdx">
-                            <h3>🟣 Bordeaux — OU : BDX</h3>
-                            <span class="ou-label">Groupe : Service Client-BDX</span>
-                            <ul>
-                                <li>mgeller (Monica Geller)</li>
-                                <li>cbing (Chandler Bing)</li>
-                            </ul>
-                            <span class="ou-label" style="margin-top:8px;display:block;">Groupe : Recouvrement-BDX</span>
-                            <ul>
-                                <li>hwinter (Henry Winter)</li>
-                                <li>rpapen (Richard Papen)</li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- DOSSIERS PARTAGÉS -->
-                <div class="projet-bloc">
-                    <h2>Dossiers partagés et permissions</h2>
-                    <p>Un dossier partagé par service a été créé sur le serveur, accessible via le chemin UNC <span class="path">\\WS-SRV-DC01\[Nom-share]</span>. Les permissions NTFS ont été configurées afin que seul le groupe correspondant puisse accéder à son dossier.</p>
-
-                    <table class="shares-table">
-                        <thead>
-                            <tr>
-                                <th>Nom du partage</th>
-                                <th>Chemin local</th>
-                                <th>Groupe autorisé</th>
-                                <th>Permissions NTFS</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><span class="path">Direction-share</span></td>
-                                <td><span class="path">C:\Direction-share</span></td>
-                                <td>Direction-TLS</td>
-                                <td>Modification</td>
-                            </tr>
-                            <tr>
-                                <td><span class="path">Technique-share</span></td>
-                                <td><span class="path">C:\Technique-share</span></td>
-                                <td>Technique-MRS</td>
-                                <td>Modification</td>
-                            </tr>
-                            <tr>
-                                <td><span class="path">Administratif-share</span></td>
-                                <td><span class="path">C:\Administratif-share</span></td>
-                                <td>Administratif-MRS</td>
-                                <td>Modification</td>
-                            </tr>
-                            <tr>
-                                <td><span class="path">Commercial-share</span></td>
-                                <td><span class="path">C:\Commercial-share</span></td>
-                                <td>Commercial-PAR</td>
-                                <td>Modification</td>
-                            </tr>
-                            <tr>
-                                <td><span class="path">Financier-share</span></td>
-                                <td><span class="path">C:\Financier-share</span></td>
-                                <td>Financier-PAR</td>
-                                <td>Modification</td>
-                            </tr>
-                            <tr>
-                                <td><span class="path">Service-client-share</span></td>
-                                <td><span class="path">C:\Service-client-share</span></td>
-                                <td>Service Client-BDX</td>
-                                <td>Modification</td>
-                            </tr>
-                            <tr>
-                                <td><span class="path">Recouvrement-share</span></td>
-                                <td><span class="path">C:\Recouvrement-share</span></td>
-                                <td>Recouvrement-BDX</td>
-                                <td>Modification</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- GPO -->
-                <div class="projet-bloc">
-                    <h2>Stratégies de groupe (GPO)</h2>
-                    <div class="gpo-grid">
-                        <div class="gpo-card deploy">
-                            <h3>📦 GPO – Déploiement logiciel</h3>
-                            <p style="font-size:.87rem;color:#3a4560;margin-bottom:10px;">Liée à chaque OU (TLS, PAR, MRS, BDX). Installation automatique au démarrage machine des logiciels suivants (fichiers .msi stockés dans le partage Technique-share) :</p>
-                            <ul>
-                                <li>Mozilla Firefox 140.0.2</li>
-                                <li>7-Zip 24.09 (x64)</li>
-                                <li>Microsoft Teams (Machine-Wide)</li>
-                            </ul>
-                        </div>
-                        <div class="gpo-card restrict">
-                            <h3>🚫 GPO – Restriction CMD</h3>
-                            <p style="font-size:.87rem;color:#3a4560;margin-bottom:10px;">Liée à toutes les OU du domaine. Désactive l'accès à l'invite de commande (<code>cmd.exe</code>) pour tous les utilisateurs, <strong>à l'exception du groupe Technique-MRS</strong> qui bénéficie d'un filtrage de sécurité en refus d'application.</p>
-                            <ul>
-                                <li>Paramètre : Configuration utilisateur > Système > Désactiver l'accès à l'invite de commandes</li>
-                                <li>Valeur : Activé</li>
-                                <li>Exception : groupe Technique-MRS exclu via délégation</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PROBLÈMES RENCONTRÉS -->
-                <div class="projet-bloc">
-                    <h2>Problèmes rencontrés et solutions apportées</h2>
-                    <ul class="problems-list">
-                        <li>
-                            <strong>Lenteur des machines virtuelles :</strong> les VMs étaient parfois très lentes, rendant certaines manipulations longues et risquées (risque d'erreur). Solution : patience, redémarrage régulier et sauvegarde d'instantanés VirtualBox avant les opérations critiques.
-                        </li>
-                        <li>
-                            <strong>Mauvaise configuration d'un dossier partagé :</strong> un paramètre de permission NTFS avait été mal défini (principal mis sur un utilisateur plutôt que sur le groupe). Solution : suppression du partage et recréation complète avec le bon groupe comme principal.
-                        </li>
-                        <li>
-                            <strong>Jonction du client au domaine :</strong> lors de la première tentative, une erreur DNS (RCODE_NAME_ERROR) empêchait de contacter le contrôleur de domaine. Cause : le client utilisait encore 8.8.8.8 comme DNS préféré. Solution : configuration du DNS préféré du client sur l'adresse du serveur (192.168.200.4).
-                        </li>
-                        <li>
-                            <strong>Fichier .msi de Microsoft Teams introuvable :</strong> le package MSI de Teams n'était pas disponible directement sur le site officiel. Solution : recherche sur plusieurs sources pour récupérer le fichier <em>Teams Machine-Wide Installer</em> compatible GPO.
-                        </li>
-                        <li>
-                            <strong>Filtrage GPO CMD pour le service Technique :</strong> difficulté à trouver l'option "Appliquer la stratégie de groupe" dans les permissions de délégation de la GPO liée à l'OU MRS. La GPO a été appliquée à toutes les OU et le groupe Technique-MRS exclu via les paramètres de sécurité avancés.
-                        </li>
+                    <h2>Réalisations</h2>
+                    <ul class="realisations-liste">
+                        <li>Installation et configuration d'un serveur Windows Server 2019 avec adresse IP statique (192.168.200.4), renommé WS-SRV-DC01 et promu contrôleur de domaine du domaine <strong>assurtech.local</strong></li>
+                        <li>Configuration du service DNS avec zone de recherche directe et inverse, vérification du bon fonctionnement via <code>nslookup</code></li>
+                        <li>Configuration du DHCP avec une étendue de 192.168.200.10 à .60, exclusion d'une plage réservée (.40 à .60) et réservation de l'adresse du serveur AD</li>
+                        <li>Jonction d'un poste client Windows 10 au domaine assurtech.local, vérification de l'attribution automatique d'adresse IP via DHCP</li>
+                        <li>Création de la structure Active Directory : 4 OUs (TLS, PAR, MRS, BDX), 7 groupes de sécurité par service, et au moins 2 utilisateurs fictifs par groupe</li>
+                        <li>Création de 7 dossiers partagés (un par service) sur le serveur, avec permissions NTFS restreintes au groupe correspondant uniquement</li>
+                        <li>Déploiement d'une GPO d'installation de logiciels au démarrage (Firefox, 7-Zip, Microsoft Teams) via des fichiers .msi stockés dans un partage réseau</li>
+                        <li>Déploiement d'une GPO de restriction d'accès à cmd.exe pour tous les utilisateurs du domaine, à l'exception du groupe Technique-MRS</li>
+                        <li>Rédaction d'un rapport PDF complet illustré de captures d'écran et d'un organigramme réalisé avec Draw.io</li>
                     </ul>
                 </div>
 
-                <!-- TECHNOLOGIES -->
+                <div class="projet-bloc">
+                    <h2>Résultats</h2>
+                    <ul class="veille-liste">
+                        <li>Environnement Windows Server pleinement opérationnel : domaine assurtech.local actif, client Windows 10 joint au domaine</li>
+                        <li>Attribution automatique des adresses IP via DHCP fonctionnelle, résolution DNS vérifiée depuis le client</li>
+                        <li>Structure Active Directory complète avec 4 OUs, 7 groupes et 14 utilisateurs fictifs correctement répartis</li>
+                        <li>Dossiers partagés avec isolation correcte des accès : chaque groupe ne peut accéder qu'à son propre dossier</li>
+                        <li>GPO de déploiement logiciel configurée sur chaque OU ; GPO de restriction CMD appliquée avec exclusion du service Technique</li>
+                    </ul>
+                </div>
+
                 <div class="projet-bloc">
                     <h2>Technologies</h2>
                     <div class="technologies-tags">
                         <span class="tech-tag">Windows Server 2019</span>
-                        <span class="tech-tag">Active Directory (ADDS)</span>
+                        <span class="tech-tag">Active Directory</span>
                         <span class="tech-tag">DNS</span>
                         <span class="tech-tag">DHCP</span>
                         <span class="tech-tag">GPO</span>
-                        <span class="tech-tag">NTFS / Partages SMB</span>
-                        <span class="tech-tag">Windows 10</span>
+                        <span class="tech-tag">NTFS / SMB</span>
                         <span class="tech-tag">VirtualBox</span>
                         <span class="tech-tag">Draw.io</span>
                     </div>
                 </div>
 
-                <!-- COMPÉTENCES BTS SIO -->
                 <div class="projet-bloc">
                     <h2>Compétences BTS SIO mobilisées</h2>
                     <div class="competences-mobilisees">
                         <div class="competence-mobilisee">
                             <h3>✓ Gérer le patrimoine informatique</h3>
-                            <p>Administration complète d'un domaine Windows Server : installation des rôles, configuration du contrôleur de domaine, gestion de l'Active Directory (OUs, groupes, utilisateurs).</p>
+                            <p>Administration complète d'un domaine Windows Server : déploiement des rôles, gestion de l'Active Directory (OUs, groupes, utilisateurs) et des ressources partagées.</p>
                         </div>
                         <div class="competence-mobilisee">
-                            <h3>✓ Répondre aux incidents et demandes d'assistance</h3>
-                            <p>Résolution de problèmes de jonction au domaine (DNS mal configuré), correction des permissions NTFS, diagnostic d'erreurs de configuration DHCP.</p>
+                            <h3>✓ Répondre aux incidents et aux demandes d'assistance</h3>
+                            <p>Diagnostic et résolution de problèmes lors de la configuration (erreur DNS à la jonction du domaine, permissions NTFS incorrectes, fichier MSI introuvable).</p>
                         </div>
                         <div class="competence-mobilisee">
                             <h3>✓ Mettre à disposition des utilisateurs un service informatique</h3>
-                            <p>Déploiement des services réseau (DNS, DHCP), création des dossiers partagés par service, déploiement automatique de logiciels via GPO (Firefox, 7-Zip, Teams).</p>
+                            <p>Déploiement des services réseau (DNS, DHCP), des dossiers partagés par service et installation automatique de logiciels via GPO.</p>
                         </div>
                         <div class="competence-mobilisee">
                             <h3>✓ Travailler en mode projet</h3>
-                            <p>Réalisation autonome de l'ensemble du TP, rédaction d'un rapport PDF illustré de 86 pages avec captures d'écran et organigramme Draw.io.</p>
+                            <p>Réalisation autonome de bout en bout, avec rédaction d'un rapport PDF illustré de captures d'écran et d'un organigramme Draw.io.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- TÉLÉCHARGEMENT PDF -->
                 <div class="projet-download">
-                    <a href="TP_WINDOWS_SERVER_-_A__MARTINS.pdf" target="_blank" class="btn">📄 Accéder au rapport complet (PDF)</a>
+                    <a href="TP_WINDOWS_SERVER_-_A__MARTINS.pdf" target="_blank" class="btn">Accéder au projet en PDF</a>
                 </div>
 
             </div>
@@ -649,14 +145,14 @@
     </main>
 
     <footer>
-        <div class="footer-container">
-            <p>&copy; 2026 Anaïs Martins - Tous droits réservés</p>
-            <p>
-                <a href="mentions-legales.html" class="footer-link">Mentions légales</a>
-                &nbsp;|&nbsp;
-                <a href="politique-confidentialite.html" class="footer-link">Politique de confidentialité</a>
-            </p>
-        </div>
-    </footer>
+    <div class="footer-container">
+        <p>&copy; 2026 Anaïs Martins - Tous droits réservés</p>
+        <p>
+            <a href="mentions-legales.html" class="footer-link">Mentions légales</a>
+            &nbsp;|&nbsp;
+            <a href="politique-confidentialite.html" class="footer-link">Politique de confidentialité</a>
+        </p>
+    </div>
+</footer>
 </body>
 </html>
