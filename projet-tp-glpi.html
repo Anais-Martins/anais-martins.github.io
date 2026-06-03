@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Déploiement d'un portail de support informatique (GLPI) - Anaïs Martins</title>
+    <title>Gestion du patrimoine informatique avec GLPI - Anaïs Martins</title>
     <link href="style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,26 +40,26 @@
 
                 <a href="realisations.html" class="btn-retour">← Retour aux réalisations</a>
 
-                <h1>Déploiement d'un portail de support informatique (GLPI)</h1>
+                <h1>Gestion du patrimoine informatique avec GLPI</h1>
 
                 <div class="projet-bloc">
                     <h2>Contexte</h2>
                     <p><strong>Date :</strong> Du 03/04/2026 au 05/04/2026</p>
                     <p><strong>Cadre :</strong> École – Projet individuel </p>
                     <p>
-                        Dans le contexte de l'entreprise fictive HelpCorp, déploiement complet d'un portail 
-                        de support interne GLPI sur un serveur Debian virtualisé, accessible depuis le navigateur 
-                        du poste hôte.
+                        Dans le contexte de l'entreprise fictive HelpCorp, utilisation de GLPI comme outil 
+                        de gestion du patrimoine informatique, en s'appuyant sur l'infrastructure LAMP déjà 
+                        déployée (VM Debian 13, Apache, MariaDB, PHP, GLPI 11.0.0).
                     </p>
                 </div>
 
                 <div class="projet-bloc">
                     <h2>Objectif</h2>
                     <p>
-                        Mettre en service un portail de gestion des incidents GLPI en déployant un environnement 
-                        serveur LAMP complet (Linux, Apache, MariaDB, PHP) sur une machine virtuelle Debian, 
-                        puis configurer les accès utilisateurs, simuler des tickets d'incidents et automatiser 
-                        les sauvegardes.
+                        Recenser et structurer l'ensemble du parc informatique de HelpCorp dans GLPI : 
+                        ordinateurs, imprimantes, écrans, licences logicielles et utilisateurs. Mettre en place 
+                        les niveaux d'habilitation, assurer la traçabilité des modifications et produire des 
+                        rapports d'état du parc.
                     </p>
                 </div>
 
@@ -71,13 +71,11 @@
                 <div class="projet-bloc">
                     <h2>Réalisations</h2>
                     <ul class="realisations-liste">
-                        <li>Création et configuration d'une machine virtuelle Debian 13 (VirtualBox, mode pont)</li>
-                        <li>Installation et configuration du serveur LAMP (Apache, MariaDB, PHP)</li>
-                        <li>Déploiement de GLPI 11.0.0 et configuration Apache (VirtualHost, .htaccess)</li>
-                        <li>Création et paramétrage de la base de données MariaDB dédiée</li>
-                        <li>Configuration des profils utilisateurs (administrateur, technicien, utilisateur standard)</li>
-                        <li>Simulation d'un ticket d'incident : ouverture, prise en charge, clôture</li>
-                        <li>Mise en place d'une sauvegarde automatisée via script Bash et tâche cron (quotidienne à 2h)</li>
+                        <li>Création de 8 comptes utilisateurs avec profils d'accès adaptés (Super-Admin, Technician, Self-Service)</li>
+                        <li>Inventaire complet du parc matériel : 8 ordinateurs, 2 imprimantes et 4 écrans avec numéros de série</li>
+                        <li>Saisie et suivi de 5 licences logicielles avec dates d'expiration (dont détection d'une licence expirée)</li>
+                        <li>Exploitation de l'historique GLPI pour assurer la traçabilité horodatée des modifications</li>
+                        <li>Génération du rapport "Matériel par état" pour identifier les équipements hors service ou en réparation</li>
                         <li>Rédaction du rapport technique complet avec captures d'écran</li>
                     </ul>
                 </div>
@@ -85,9 +83,10 @@
                 <div class="projet-bloc">
                     <h2>Résultats</h2>
                     <ul class="veille-liste">
-                        <li>Portail GLPI opérationnel et accessible depuis le navigateur du poste hôte</li>
-                        <li>Gestion des incidents fonctionnelle avec simulation complète du cycle de vie d'un ticket</li>
-                        <li>Sauvegarde automatisée en place avec rétention de 7 jours et journalisation des opérations</li>
+                        <li>Parc informatique entièrement inventorié et structuré dans GLPI</li>
+                        <li>Gestion des droits utilisateurs opérationnelle avec trois niveaux d'habilitation distincts</li>
+                        <li>Suivi des licences en place avec identification des renouvellements à effectuer</li>
+                        <li>Traçabilité complète des modifications grâce à l'historique automatique de GLPI</li>
                     </ul>
                 </div>
 
@@ -99,8 +98,6 @@
                         <span class="tech-tag">MariaDB</span>
                         <span class="tech-tag">PHP</span>
                         <span class="tech-tag">GLPI</span>
-                        <span class="tech-tag">Bash</span>
-                        <span class="tech-tag">Cron</span>
                         <span class="tech-tag">VirtualBox</span>
                     </div>
                 </div>
@@ -110,15 +107,15 @@
                     <div class="competences-mobilisees">
                         <div class="competence-mobilisee">
                             <h3>✓ Gérer le patrimoine informatique</h3>
-                            <p>Déploiement et administration d'un service de gestion de parc et d'incidents.</p>
-                        </div>
-                        <div class="competence-mobilisee">
-                            <h3>✓ Répondre aux incidents et aux demandes d'assistance</h3>
-                            <p>Configuration de GLPI et simulation du cycle complet de traitement d'un ticket.</p>
+                            <p>Recensement des ressources numériques, exploitation d'un référentiel ITSM, mise en place des niveaux d'habilitation, suivi des licences et traçabilité des modifications.</p>
                         </div>
                         <div class="competence-mobilisee">
                             <h3>✓ Mettre à disposition des utilisateurs un service informatique</h3>
-                            <p>Installation, configuration et mise en service d'un portail web accessible au réseau interne.</p>
+                            <p>Administration de GLPI sur infrastructure LAMP, gestion des comptes et des droits d'accès selon les rôles des utilisateurs.</p>
+                        </div>
+                        <div class="competence-mobilisee">
+                            <h3>✓ Vérifier la continuité du service</h3>
+                            <p>Identification des équipements hors service via les rapports GLPI et suivi de l'état du parc en temps réel.</p>
                         </div>
                     </div>
                 </div>
